@@ -1,0 +1,57 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-background: #16161A;
+  --color-primary:#FFFFFE;
+  --color-secondary:#7F5AF0;
+  --color-tertiary:#242629;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#app{
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+}
+
+.card {
+  width: 370px;
+  box-shadow: 0px 0px 4px 0px var(--color-secondary);
+  border-radius:8px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  padding:12px;
+
+  background:#24262980;
+  backdrop-filter: blur(2px);
+}
+
+.container_left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
