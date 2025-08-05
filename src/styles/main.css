@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -10,18 +10,36 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+
   -moz-osx-font-smoothing: grayscale;
 
-  --color-background: #16161A;
-  --color-primary:#FFFFFE;
-  --color-secondary:#7F5AF0;
-  --color-tertiary:#242629;
+  --color-background: #16161a;
+  --color-primary: #fffffe;
+  --color-secondary: #7f5af0;
+  --color-tertiary: #24262935;
+
+  --font-title: "Montserrat";
 }
 
-*{
+.font-title {
+  font-family: var(--font-title);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-SemiBold.woff2") format("woff2");
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -31,23 +49,60 @@ body {
   min-height: 100vh;
 }
 
-#app{
+#app {
   display: flex;
   flex-direction: column;
   width: 1280px;
 }
 
 .card {
-  width: 370px;
+  width: 380px;
   box-shadow: 0px 0px 4px 0px var(--color-secondary);
-  border-radius:8px;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  padding:12px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: var(--color-tertiary);
+  backdrop-filter: blur(5px);
+}
 
-  background:#24262980;
-  backdrop-filter: blur(2px);
+.animation-fade {
+  animation: fade 1s forwards;
+  animation-fill-mode: backwards;
+  animation-delay: 0s;
+}
+
+.animation-fade2{
+  animation: fade 1s forwards;
+  animation-fill-mode: backwards;
+  animation-delay: 0.5s;
+}
+
+.animation-fade3{
+  animation: fade 1s forwards;
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: scale(1.1) translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0%);
+  }
+}
+
+
+
+.bg-gif{
+  background-image: url("https://media1.tenor.com/m/kjXMU4dl8lAAAAAd/hello-world.gif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container_left {
@@ -55,3 +110,5 @@ body {
   flex-direction: column;
   gap: 12px;
 }
+
+

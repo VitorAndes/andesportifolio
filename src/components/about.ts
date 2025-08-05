@@ -6,21 +6,72 @@ class AboutComponent extends HTMLElement {
   connectedCallback() {
     this.shadowRoot!.innerHTML = `
             <style>
-                
+              * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-                    img {                        
-                        border-radius:4px;
-                        width:100%;
-                    }
+.avatar { 
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 5px;
+  user-select: none;
+}
 
+h1 {
+  color: var(--color-secondary);
+  font-family: var(--font-title);
+  letter-spacing: -3px;
+  margin-bottom: 15px;
+}
+
+span {
+  font-family: var(--font-title);
+  color: var(--color-secondary);
+}
+
+p {
+  line-height: -1;
+  margin-bottom:25px;
+}
+
+.socialMedia {
+  display: flex;
+  gap: 15px;
+
+  a {
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  a:hover {
+    filter: drop-shadow(0 0 1px var(--color-secondary));
+    transform: scale(1.1);
+  }
+}
             </style>
 
             <slot>
-                <img src="/src/assets/images/avatar.avif" alt=""/>
+                <img class="avatar" src="/src/assets/images/avatar.avif" alt=""/>
                 <div>
-                    <h1>Olá! Sou Vitor Andes</h1>
-                    <h4>Desenvolvedor front-end</h4>
-                    <p>Um desenvolvedor especializado em front-end. Com um histórico sólido em <strong>React, typescript, Javascript e node js</strong>. Meu objetivo é continuar crescendo na área de desenvolvimento web, aplicando minhas habilidades para criar soluções inovadoras.</p>
+                    <h3>Olá! Sou Vitor Andes</h3>
+                    <h1>Desenvolvedor front-end</h1>
+                    <p>Um desenvolvedor especializado em front-end. Com um histórico sólido em <span>React, typescript, Javascript e node js</span>. Meu objetivo é continuar crescendo na área de desenvolvimento web, aplicando minhas habilidades para criar soluções inovadoras.</p>
+                </div>
+                <div class="socialMedia">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/VitorAndes">
+                    <img src="/src/assets/svg/github.svg" alt="ícone do github"/>
+                </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/vitor-andes-dos-santos/">
+                    <img src="/src/assets/svg/linkedin.svg" alt="ícone do linkedin" />
+                  </a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/vtr_andes/">
+                <img src="/src/assets/svg/instagram.svg" alt="ícone do instagram" />
+              </a>
                 </div>
             </slot>
         `;
