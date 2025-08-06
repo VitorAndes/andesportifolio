@@ -10,19 +10,15 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-
   -moz-osx-font-smoothing: grayscale;
 
   --color-background: #16161a;
+  --color-text: #d9d9d9;
   --color-primary: #fffffe;
   --color-secondary: #7f5af0;
-  --color-tertiary: #24262935;
+  --color-tertiary: #16161a2d;
 
   --font-title: "Montserrat";
-}
-
-.font-title {
-  font-family: var(--font-title);
 }
 
 @font-face {
@@ -56,7 +52,7 @@ body {
 }
 
 .card {
-  width: 380px;
+  width: 365px;
   box-shadow: 0px 0px 4px 0px var(--color-secondary);
   border-radius: 8px;
   overflow: hidden;
@@ -65,24 +61,24 @@ body {
   padding: 12px;
   background: var(--color-tertiary);
   backdrop-filter: blur(5px);
+  animation: fade 1s forwards;
+  animation-fill-mode: backwards;
 }
 
 .animation-fade {
-  animation: fade 1s forwards;
-  animation-fill-mode: backwards;
   animation-delay: 0s;
 }
 
-.animation-fade2{
-  animation: fade 1s forwards;
-  animation-fill-mode: backwards;
+.animation-fade2 {
   animation-delay: 0.5s;
 }
 
-.animation-fade3{
-  animation: fade 1s forwards;
-  animation-fill-mode: backwards;
+.animation-fade3 {
   animation-delay: 1s;
+}
+
+.animation-fade4{
+  animation-delay: 1.5s;
 }
 
 @keyframes fade {
@@ -96,19 +92,24 @@ body {
   }
 }
 
-
-
-.bg-gif{
+.bg-gif {
   background-image: url("https://media1.tenor.com/m/kjXMU4dl8lAAAAAd/hello-world.gif");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.container_left {
+.container {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: 15px;
+
+  .container_left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .container_right {
+    width: 100%;
+  } 
 }
-
-

@@ -6,7 +6,7 @@ class AboutComponent extends HTMLElement {
   connectedCallback() {
     this.shadowRoot!.innerHTML = `
             <style>
-              * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,8 +22,20 @@ class AboutComponent extends HTMLElement {
 h1 {
   color: var(--color-secondary);
   font-family: var(--font-title);
-  letter-spacing: -3px;
+  letter-spacing:-3px;
   margin-bottom: 15px;
+
+  display:inline-block;
+  white-space:nowrap;
+  overflow:hidden;
+  border-right:0.1em solid var(--color-secondary);
+  animation: typingAnimation 4s steps(11) infinite,cursorAnimation 0.5s step-end infinite alternate;
+}
+
+h2{
+  display:flex;
+  align-items:center;
+  gap:5px;
 }
 
 span {
@@ -53,12 +65,31 @@ p {
     transform: scale(1.1);
   }
 }
+
+@keyframes typingAnimation {
+  0%,10%{
+    width:0;
+  }
+  45%,55%{
+    width:11em;
+  }
+  90%,100%{
+    width:0;
+  }
+}
+
+@keyframes cursorAnimation{
+  50%{
+    border-right-color:transparent;
+  }
+}
+
             </style>
 
             <slot>
-                <img class="avatar" src="/src/assets/images/avatar.avif" alt=""/>
+                <img class="avatar" src="/src/assets/images/avatar.avif" alt="foto de vitor andes"/>
                 <div>
-                    <h3>Olá! Sou Vitor Andes</h3>
+                    <h2>Vitor Andes <img src="/src/assets/svg/check.svg" alt="check icon" /></h2>
                     <h1>Desenvolvedor front-end</h1>
                     <p>Um desenvolvedor especializado em front-end. Com um histórico sólido em <span>React, typescript, Javascript e node js</span>. Meu objetivo é continuar crescendo na área de desenvolvimento web, aplicando minhas habilidades para criar soluções inovadoras.</p>
                 </div>
