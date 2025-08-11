@@ -44,6 +44,7 @@ span {
 }
 
 p {
+  color:var(--color-text);
   line-height: -1;
   margin-bottom:25px;
 }

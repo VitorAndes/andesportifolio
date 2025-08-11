@@ -3,40 +3,46 @@ type ProjectsType = {
   description: string;
   image: string;
   link: string;
+  github: string;
   techs: string[];
 };
 
 export const ProjectsData: ProjectsType[] = [
   {
-    title: "powerblessed",
-    description:
-      "Uma landing page moderna desenvolvida para apresentar os serviços e sanar dúvidas.",
-    image: "https://i.imgur.com/ZWsBzXr.png",
-    link: "https://powerblessed.vercel.app/",
-    techs: ["vue", "less", "typescript"],
-  },
-  {
     title: "haru-hub",
     description:
-      "Uma plataforma que consome a API da Steam para exibir de forma interativa a minha biblioteca de jogos.",
+      "Site interativo que consome a API da Steam para exibir a minha biblioteca de jogos, mostrando informações detalhadas, jogos recentes e filtros para navegação prática.",
     image: "https://i.imgur.com/0APFotZ.png",
     link: "https://haru-hub-frontend.vercel.app/",
     techs: ["react", "typescript", "tailwind"],
+    github: "https://github.com/VitorAndes/Haru-Hub_frontend",
   },
+  {
+    title: "powerblessed",
+    description:
+      "Landing page moderna desenvolvida para uma empresa de energia solar, focada em apresentar serviços, transmitir credibilidade e facilitar o contato com clientes, com design limpo e responsivo.",
+    image: "https://i.imgur.com/ZWsBzXr.png",
+    link: "https://powerblessed.vercel.app/",
+    techs: ["vue", "less", "typescript"],
+    github: "https://github.com/VitorAndes/powerblessed",
+  },
+
   {
     title: "andesFinance",
     description:
-      "Um dashboard financeiro desenvolvido para gestão inteligente de gastos mensais. Oferecendo um controle financeiro simplificado e visualmente intuitivo.",
+      "Dashboard financeiro voltado para gestão inteligente de gastos mensais, com relatórios visuais, acompanhamento de saldo, métodos de pagamento e interface intuitiva para controle simplificado.",
     image: "https://i.imgur.com/P1Wd6pD.png",
     link: "https://andesfinance.vercel.app/",
     techs: ["react", "typescript", "tailwind"],
+    github: "https://github.com/VitorAndes/andesfinance",
   },
   {
     title: "esteticaGio",
     description:
-      "Uma landing page elegante para apresentar serviços de estética profissional. O projeto transmite confiança e profissionalismo para atrair clientes de forma eficiente.",
+      "Landing page elegante para serviços de estética, com layout profissional, paleta de cores harmoniosa e foco em transmitir confiança e atrair clientes de forma eficiente.",
     image: "https://i.imgur.com/RfRY1k7.png",
     link: "https://esteticagio.vercel.app/",
     techs: ["vue", "typescript", "less"],
+    github: "https://github.com/VitorAndes/Esteticagio",
   },
 ];
