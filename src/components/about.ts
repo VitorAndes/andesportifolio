@@ -88,21 +88,21 @@ p {
             </style>
 
             <slot>
-                <img class="avatar" src="/src/assets/images/avatar.avif" alt="foto de vitor andes"/>
+                <img class="avatar" src="/images/avatar.avif" alt="foto de vitor andes"/>
                 <div>
-                    <h2>Vitor Andes <img src="/src/assets/svg/check.svg" alt="check icon" /></h2>
+                    <h2>Vitor Andes <img src="/svg/check.svg" alt="check icon" /></h2>
                     <h1>Desenvolvedor front-end</h1>
                     <p>Um desenvolvedor especializado em front-end. Com um histórico sólido em <span>React, typescript, Javascript e node js</span>. Meu objetivo é continuar crescendo na área de desenvolvimento web, aplicando minhas habilidades para criar soluções inovadoras.</p>
                 </div>
                 <div class="socialMedia">
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/VitorAndes">
-                    <img src="/src/assets/svg/github.svg" alt="ícone do github"/>
+                    <img src="svg/github.svg" alt="ícone do github"/>
                 </a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/vitor-andes-dos-santos/">
-                    <img src="/src/assets/svg/linkedin.svg" alt="ícone do linkedin" />
+                    <img src="svg/linkedin.svg" alt="ícone do linkedin" />
                   </a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/vtr_andes/">
-                <img src="/src/assets/svg/instagram.svg" alt="ícone do instagram" />
+                <img src="svg/instagram.svg" alt="ícone do instagram" />
               </a>
                 </div>
             </slot>
