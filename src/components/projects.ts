@@ -28,7 +28,7 @@ class ProjectsComponent extends HTMLElement {
       .container {
         display:flex;
         overflow-x:hidden;
-        height:795px;
+        height:850px;
         scroll-behavior: smooth;
         background: var(--color-tertiary);
         border-radius: 8px;
@@ -79,6 +79,7 @@ class ProjectsComponent extends HTMLElement {
                 
                 h2 {
                     font-family:var(--font-title);
+                    font-size:var(--clamp-h2);
                     margin-bottom:10px;        
                 }
             };
@@ -107,6 +108,7 @@ class ProjectsComponent extends HTMLElement {
             };
 
             p{
+                font-size:var(--clamp-p);
                 color:var(--color-text);
                 margin-bottom:20px;
             }
@@ -128,6 +130,7 @@ class ProjectsComponent extends HTMLElement {
                 background: var(--color-secondary);
                 backdrop-filter: blur(5px);
                 transition:all .3s ease-in-out;
+                font-size:var(--clamp-p);
             }
 
             .badge:hover{
@@ -157,6 +160,7 @@ class ProjectsComponent extends HTMLElement {
         font-family: var(--font-title);
         color:var(--color-secondary);
         transition: all 0.3s ease;
+        font-size:var(--clamp-p);
       }
       .nav-btn:hover {
         color: var(--color-primary);
@@ -176,6 +180,17 @@ class ProjectsComponent extends HTMLElement {
           transform: scale(1) ;
         }
       }
+
+
+      @media (max-width:1280px){
+        .container{
+          height:fit-content;
+        }
+
+        .navbar{
+          flex-direction:column;
+        }
+      }
     </style>
 
     <div id="container">
@@ -183,7 +198,7 @@ class ProjectsComponent extends HTMLElement {
         ${ProjectsData.map(
           (project, i) => `
           <button class="nav-btn" data-index="${i}">
-            <h3>${project.title}</h3>
+            <p>${project.title}</p>
           </button>
         `
         ).join("")}
@@ -195,14 +210,16 @@ class ProjectsComponent extends HTMLElement {
             <a class="imgLink" href=${
               project.link
             } target="_blank" rel="noopener noreferrer">
-              <img src="${project.image}" />
+              <img src="${
+                project.image
+              }" alt="imagem do projeto" loading="lazy" />
             </a>
             <div class="content_infos">
               <a class="title" target="_blank" rel="noopener noreferrer" href="${
                 project.github
               }">
                 <h2>${project.title}</h2>
-                <img src="/src/assets/svg/link.svg" alt="" />
+                <img src="/svg/link.svg" alt="" />
               </a>
               <p>${project.description}</p>
             </div>

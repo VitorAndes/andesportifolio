@@ -25,6 +25,8 @@ h1 {
   letter-spacing:-3px;
   margin-bottom: 15px;
 
+  font-size:var(--clamp-h1);
+
   display:inline-block;
   white-space:nowrap;
   overflow:hidden;
@@ -35,6 +37,7 @@ h1 {
 h2{
   display:flex;
   align-items:center;
+  font-size:var(--clamp-h2);
   gap:5px;
 }
 
@@ -44,6 +47,7 @@ span {
 }
 
 p {
+  font-size:var(--clamp-p);
   color:var(--color-text);
   line-height: -1;
   margin-bottom:25px;
