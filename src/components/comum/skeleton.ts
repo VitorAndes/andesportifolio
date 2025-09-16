@@ -60,6 +60,7 @@ class ImageWithLoading extends HTMLElement {
         ?.querySelector("img")
         ?.setAttribute("alt", newValue || "");
     }
+    console.log(oldValue); // só pra ele nao chorar
   }
 
   loadImage(src: string) {
