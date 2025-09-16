@@ -74,6 +74,7 @@ class ProjectsComponent extends HTMLElement {
                 position:relative;
                 align-items:baseline;
                 gap:10px;
+                margin-top:20px;
                 transition:all .3s ease-in-out;
                 color:var(--color-primary);
                 
@@ -210,9 +211,11 @@ class ProjectsComponent extends HTMLElement {
             <a class="imgLink" href=${
               project.link
             } target="_blank" rel="noopener noreferrer">
-              <img src="${
+              
+              <image-loading src="${
                 project.image
-              }" alt="imagem do projeto" loading="lazy" />
+              }" alt="imagem do projeto"></image-loading>
+
             </a>
             <div class="content_infos">
               <a class="title" target="_blank" rel="noopener noreferrer" href="${

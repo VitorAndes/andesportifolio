@@ -12,13 +12,6 @@ class AboutComponent extends HTMLElement {
   box-sizing: border-box;
 }
 
-.avatar { 
-  border-radius: 4px;
-  width: 100%;
-  margin-bottom: 5px;
-  user-select: none;
-}
-
 h1 {
   color: var(--color-secondary);
   font-family: var(--font-title);
@@ -39,6 +32,7 @@ h2{
   align-items:center;
   font-size:var(--clamp-h2);
   gap:5px;
+  margin-top:13px;
 }
 
 span {
@@ -92,7 +86,7 @@ p {
             </style>
 
             <slot>
-                <img class="avatar" src="/images/avatar.avif" alt="foto de vitor andes"/>
+            <image-loading src="/images/avatar.avif" alt="foto de vitor andes"></image-loading>
                 <div>
                     <h2>Vitor Andes <img src="/svg/check.svg" alt="check icon" /></h2>
                     <h1>Desenvolvedor front-end</h1>

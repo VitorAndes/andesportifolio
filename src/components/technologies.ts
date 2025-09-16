@@ -9,10 +9,11 @@ class TechnologiesComponent extends HTMLElement {
         
         <style>
             div {
-             display: flex;
-             gap: 30px;
-             padding:5px;
-             animation: carrousel 30s linear infinite;
+              user-select: none;
+              display: flex;
+              gap: 30px;
+              padding:5px;
+              animation: carrousel 30s linear infinite;
             }
 
 
@@ -30,36 +31,36 @@ class TechnologiesComponent extends HTMLElement {
         </style>
         <slot>
             <div>
-                <img src="/svg/technologies/html.svg" alt="logo do html" />
-                <img src="/svg/technologies/css.svg" alt="logo do css" />
-                <img src="/svg/technologies/javascript.svg" alt="logo do javascript" />
-                <img src="/svg/technologies/typescript.svg" alt="logo do typescript" />
-                <img src="/svg/technologies/tailwind.svg" alt="logo do tailwindCss" />
-                <img src="/svg/technologies/less.svg" alt="logo do less" />
-                <img src="/svg/technologies/react.svg" alt="logo do react" />
-                <img src="/svg/technologies/vue.svg" alt="logo do vue" />
-                <img src="/svg/technologies/node.svg" alt="logo do node" />
-                <img src="/svg/technologies/sql.svg" alt="logo do sql" />
-                <img src="/svg/technologies/prisma.svg" alt="logo do prisma" />
-                <img src="/svg/technologies/vscode.svg" alt="logo do vscode" />
-                <img src="/svg/technologies/figma.svg" alt="logo do figma" />
-                <img src="/svg/technologies/git.svg" alt="logo do git" />
-                <img src="/svg/technologies/vite.svg" alt="logo do vite" />
-                <img src="/svg/technologies/html.svg" alt="logo do html" />
-                <img src="/svg/technologies/css.svg" alt="logo do css" />
-                <img src="/svg/technologies/javascript.svg" alt="logo do javascript" />
-                <img src="/svg/technologies/typescript.svg" alt="logo do typescript" />
-                <img src="/svg/technologies/tailwind.svg" alt="logo do tailwindCss" />
-                <img src="/svg/technologies/less.svg" alt="logo do less" />
-                <img src="/svg/technologies/react.svg" alt="logo do react" />
-                <img src="/svg/technologies/vue.svg" alt="logo do vue" />
-                <img src="/svg/technologies/node.svg" alt="logo do node" />
-                <img src="/svg/technologies/sql.svg" alt="logo do sql" />
-                <img src="/svg/technologies/prisma.svg" alt="logo do prisma" />
-                <img src="/svg/technologies/vscode.svg" alt="logo do vscode" />
-                <img src="/svg/technologies/figma.svg" alt="logo do figma" />
-                <img src="/svg/technologies/git.svg" alt="logo do git" />
-                <img src="/svg/technologies/vite.svg" alt="logo do vite" />
+                <img draggable="false" src="/svg/technologies/html.svg" alt="logo do html" />
+                <img draggable="false" src="/svg/technologies/css.svg" alt="logo do css" />
+                <img draggable="false" src="/svg/technologies/javascript.svg" alt="logo do javascript" />
+                <img draggable="false" src="/svg/technologies/typescript.svg" alt="logo do typescript" />
+                <img draggable="false" src="/svg/technologies/tailwind.svg" alt="logo do tailwindCss" />
+                <img draggable="false" src="/svg/technologies/less.svg" alt="logo do less" />
+                <img draggable="false" src="/svg/technologies/react.svg" alt="logo do react" />
+                <img draggable="false" src="/svg/technologies/vue.svg" alt="logo do vue" />
+                <img draggable="false" src="/svg/technologies/node.svg" alt="logo do node" />
+                <img draggable="false" src="/svg/technologies/sql.svg" alt="logo do sql" />
+                <img draggable="false" src="/svg/technologies/prisma.svg" alt="logo do prisma" />
+                <img draggable="false" src="/svg/technologies/vscode.svg" alt="logo do vscode" />
+                <img draggable="false" src="/svg/technologies/figma.svg" alt="logo do figma" />
+                <img draggable="false" src="/svg/technologies/git.svg" alt="logo do git" />
+                <img draggable="false" src="/svg/technologies/vite.svg" alt="logo do vite" />
+                <img draggable="false" src="/svg/technologies/html.svg" alt="logo do html" />
+                <img draggable="false" src="/svg/technologies/css.svg" alt="logo do css" />
+                <img draggable="false" src="/svg/technologies/javascript.svg" alt="logo do javascript" />
+                <img draggable="false" src="/svg/technologies/typescript.svg" alt="logo do typescript" />
+                <img draggable="false" src="/svg/technologies/tailwind.svg" alt="logo do tailwindCss" />
+                <img draggable="false" src="/svg/technologies/less.svg" alt="logo do less" />
+                <img draggable="false" src="/svg/technologies/react.svg" alt="logo do react" />
+                <img draggable="false" src="/svg/technologies/vue.svg" alt="logo do vue" />
+                <img draggable="false" src="/svg/technologies/node.svg" alt="logo do node" />
+                <img draggable="false" src="/svg/technologies/sql.svg" alt="logo do sql" />
+                <img draggable="false" src="/svg/technologies/prisma.svg" alt="logo do prisma" />
+                <img draggable="false" src="/svg/technologies/vscode.svg" alt="logo do vscode" />
+                <img draggable="false" src="/svg/technologies/figma.svg" alt="logo do figma" />
+                <img draggable="false" src="/svg/technologies/git.svg" alt="logo do git" />
+                <img draggable="false" src="/svg/technologies/vite.svg" alt="logo do vite" />
             </div>
         </slot>
         `;
