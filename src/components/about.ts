@@ -43,7 +43,8 @@ span {
 p {
   font-size:var(--clamp-p);
   color:var(--color-text);
-  line-height: -1;
+  line-height: -1px;
+  letter-spacing: -0.5px;
   margin-bottom:25px;
 }
 
@@ -90,7 +91,7 @@ p {
                 <div>
                     <h2>Vitor Andes <img src="/svg/check.svg" alt="check icon" /></h2>
                     <h1>Desenvolvedor front-end</h1>
-                    <p>Um desenvolvedor especializado em front-end. Com um histórico sólido em <span>React, typescript, Javascript e node js</span>. Meu objetivo é continuar crescendo na área de desenvolvimento web, aplicando minhas habilidades para criar soluções inovadoras.</p>
+                    <p>Um desenvolvedor especializado em front-end. Com um histórico sólido em <span>React, typescript, Javascript e node js</span></p>
                 </div>
                 <div class="socialMedia">
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/VitorAndes">

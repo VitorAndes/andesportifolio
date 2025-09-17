@@ -28,7 +28,7 @@ class ProjectsComponent extends HTMLElement {
       .container {
         display:flex;
         overflow-x:hidden;
-        height:850px;
+        height:743px;
         scroll-behavior: smooth;
         background: var(--color-tertiary);
         border-radius: 8px;
@@ -45,50 +45,62 @@ class ProjectsComponent extends HTMLElement {
         flex-direction: column;
         padding:8px;
       }
-      .content .imgLink img {
-        width:100%;
-        border-radius:4px;
-        margin-bottom:20px;
-        transition:all .5s ease-in-out;
-      }
-
-      img:hover{
-        transform:scale(1.01);
-        animation:pulse 2s linear infinite;
-      }
-
-      @keyframes pulse {
-        from{
-          opacity:0;
-        }
-        to{
-          opacity:1;
-          tranform:scale(1.1);
-        }
-      }
-
-
       .content_infos { 
-            .title {
+              h2 {
+                color:var(--color-primary);
+                  font-family:var(--font-title);
+                  font-size:var(--clamp-h2);
+                  margin-bottom:10px;
+                  margin-top:25px;        
+              }
+
+            
+
+            p{
+                font-size:var(--clamp-p);
+                color:var(--color-text);
+                margin-bottom:20px;
+                max-width:700px; 
+            }
+        }
+
+
+        
+        
+        .info_project{
+          display:flex;
+          justify-content:space-between;
+          align-items:baseline;
+          flex-wrap:wrap;
+
+          >div{
+            display:flex;
+            gap:15px;
+            margin-bottom:20px;
+          }
+          .project_link {
+            
+            
+            font-size:var(--clamp-p);
+            color:var(--color-text);
                 display:inline-flex;
                 position:relative;
-                align-items:baseline;
+                align-items:center;
                 gap:10px;
-                margin-top:20px;
-                transition:all .3s ease-in-out;
-                color:var(--color-primary);
                 
-                h2 {
-                    font-family:var(--font-title);
-                    font-size:var(--clamp-h2);
-                    margin-bottom:10px;        
-                }
-            };
+                transition:all .3s ease-in-out;
 
-            .title:after{
+                >img{
+                  width:24px;
+                }
+                
+              };
+              
+
+            .project_link:after{
                 content:"";
                 pointer-events:none;
-                bottom: 10px;
+                bottom: -10px;
                 left:50%;
                 position:absolute;
                 width:0%;
@@ -99,32 +111,25 @@ class ProjectsComponent extends HTMLElement {
                 transition-property:width,left;
             };
 
-            .title:focus,.title:hover{
+            .project_link:focus,.project_link:hover{
                 color:var(--color-secondary);
             };
 
-            .title:focus:after,.title:hover:after{
+            .project_link:focus:after,.project_link:hover:after{
                 width:100%;
                 left:0%;
             };
-
-            p{
-                font-size:var(--clamp-p);
-                color:var(--color-text);
-                margin-bottom:20px;
-            }
-        }   
+        }
 
         .content_techs{
             display:flex;
-            justify-self: end;
             gap:5px;
 
             .badge{
                 font-family:var(--font-title);
                 border: 1px solid var(--color-background);
                 border-radius: 8px;
-                overflow: hidden;
+                
                 display: flex;
                 flex-direction: column;
                 padding: 6px 8px;
@@ -208,22 +213,24 @@ class ProjectsComponent extends HTMLElement {
         ${ProjectsData.map(
           (project) => `
           <div class="content">
-            <a class="imgLink" href=${
-              project.link
-            } target="_blank" rel="noopener noreferrer">
-              
-              <image-loading src="${
-                project.image
-              }" alt="imagem do projeto"></image-loading>
-
-            </a>
+            <image-loading src="${
+              project.image
+            }" alt="imagem do projeto"></image-loading>
             <div class="content_infos">
-              <a class="title" target="_blank" rel="noopener noreferrer" href="${
-                project.github
-              }">
+              <div class="info_project">
+                
                 <h2>${project.title}</h2>
-                <img src="/svg/link.svg" alt="" />
-              </a>
+                
+
+              <div>
+                <a class="project_link " target="_blank" rel="noopener noreferrer" href=${
+                  project.github
+                }>github <img src="svg/github.svg"/></a>
+                <a class="project_link " target="_blank" rel="noopener noreferrer" href=${
+                  project.link
+                }>projeto <img src="svg/link.svg"/></a>
+              </div>
+              </div>
               <p>${project.description}</p>
             </div>
             <div class="content_techs">
